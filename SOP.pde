@@ -51,14 +51,14 @@ void draw() {
   for (int j=0; j<n; j++) {
     ellipseMode(RADIUS);
     fill(255, 0, 0);
-    //ellipse((nselectarray[j]*10)+50, (height-tselectarray[j]*0.3)-50, 5, 5);
+    ellipse((nselectarray[j]*10)+50, (height-tselectarray[j]*0.3)-50, 5, 5);
     fill(0, 0, 255);
     ellipse((nquickarray[j]*6)+50, (height-tquickarray[j]*0.1)-50, 5, 5);
   }
   textSize(30);
-  //text("QuickSort", 530, 100);
+  text("QuickSort", 560, 100);
   fill(255, 0, 0);
-  //text("SelectionSort", 530, height-100);
+  text("SelectionSort", 280, 100);
   fill(50);
   text("n", width/4, height-25);
   text("t", 20, height/2);
