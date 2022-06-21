@@ -6,8 +6,9 @@ class SelectionSort extends Sort {
       for (int j = i+1; j < array.length; j++) {
         if (array[j] < array[minIndex]) {
           minIndex = j;
-          tselect++;
+          //tselect++;
         }
+        tselect++;
       }
 
       int temp = array[minIndex];

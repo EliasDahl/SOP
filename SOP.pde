@@ -24,6 +24,7 @@ void setup() {
       
       //sorteret array
       //inputselect[i] = i+1;
+      inputselect[i] = inputselect.length-i;
     }
     for (int i = 0; i<inputquick.length; i++) {
       float random = random(1000);
@@ -31,6 +32,7 @@ void setup() {
       
       //sorteret array
       //inputquick[i] = i+1;
+      inputquick[i] = inputquick.length-i;
     }
     print();
     expand(tselectarray, inputselect.length);
@@ -51,14 +53,17 @@ void draw() {
   for (int j=0; j<n; j++) {
     ellipseMode(RADIUS);
     fill(255, 0, 0);
-    ellipse((nselectarray[j]*10)+50, (height-tselectarray[j]*0.3)-50, 5, 5);
+    ellipse((nselectarray[j]*6)+50, (height-tselectarray[j]*0.01)-50, 5, 5);
     fill(0, 0, 255);
-    ellipse((nquickarray[j]*6)+50, (height-tquickarray[j]*0.1)-50, 5, 5);
+    ellipse((nquickarray[j]*6)+50, (height-tquickarray[j]*0.01)-50, 5, 5);
   }
+  fill(0,50);
+  rect(70,20,220,100);
+  fill(0,0,255);
   textSize(30);
-  text("QuickSort", 560, 100);
+  text("QuickSort", 90, 100);
   fill(255, 0, 0);
-  text("SelectionSort", 280, 100);
+  text("SelectionSort", 90, 50);
   fill(50);
   text("n", width/4, height-25);
   text("t", 20, height/2);
@@ -66,12 +71,14 @@ void draw() {
   stroke(50);
   line(0, height-50, width, height-50);
   line(50, 0, 50, height);
+  fill(0);
+  text("200",nquickarray[199]*6+50,height-20);
 }
 
 void print() {
-  //println("array længde: "+input.length);
+  println("array længde: "+inputselect.length);
 
-  println("usorteret array");
+  //println("usorteret array");
   //selectsort.printArray(input);
   println();
 
